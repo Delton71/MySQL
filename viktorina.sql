@@ -9,7 +9,7 @@ WHERE year(ctime) < 2020 and comission is not null and round(total_price * comis
 Сколько заказов стоимостью 2020р.?
 */
 -- ans: 2
-SELECT total_price FROM hands.bus_order		-- 2
+SELECT total_price FROM hands.bus_order
 WHERE year(ctime) < 2020 and total_price = 2020;
 
 /*
@@ -32,7 +32,8 @@ WHERE surname = 'Панько';
 Сколько КО на м. Аэропорт?
 */
 -- что означает КО?
-SELECT * FROM hands.bus_order	-- 2
+-- ans: 2
+SELECT * FROM hands.bus_order
 WHERE address LIKE '%м. Аэропорт%';
 
 /*
@@ -43,7 +44,8 @@ WHERE address LIKE '%м. Аэропорт%';
 /*
 Сколько Фархудов среди наших клиентов?
 */
-SELECT * FROM hands.bus_client	-- ans: 1
+-- ans: 1
+SELECT * FROM hands.bus_client
 WHERE name LIKE '%Фархуд%';
 
 /*
@@ -51,6 +53,6 @@ WHERE name LIKE '%Фархуд%';
 */
 -- знать бы Костин номер телефона)))
 
-SELECT tags FROM hands.bus_order	-- ?
+SELECT tags FROM hands.bus_order	-- draft
 WHERE tags is not null;
 
